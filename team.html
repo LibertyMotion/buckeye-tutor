@@ -1,0 +1,138 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Team Console | Buckeye Tutor</title>
+  <meta name="description" content="Buckeye Tutor team console: precommitted decision rule, tester ledger with denominators, and unit economics.">
+  <meta name="robots" content="noindex">
+  <meta name="theme-color" content="#bb0000">
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700;800&family=Barlow:wght@400;500;600;700&display=swap">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+    <defs>
+      <symbol id="i-arrow" viewBox="0 0 24 24"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></symbol>
+      <symbol id="i-check" viewBox="0 0 24 24"><path d="M20 6 9 17l-5-5"/></symbol>
+      <symbol id="i-x" viewBox="0 0 24 24"><path d="M18 6 6 18"/><path d="m6 6 12 12"/></symbol>
+      <symbol id="i-copy" viewBox="0 0 24 24"><rect width="14" height="14" x="8" y="8" rx="2"/><path d="M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2"/></symbol>
+    </defs>
+  </svg>
+
+  <a class="skip" href="#main">Skip to main content</a>
+
+  <header class="console-head">
+    <div class="wrap">
+      <a class="brand" href="index.html" aria-label="Back to Buckeye Tutor">
+        <svg class="brand-mark" viewBox="0 0 64 64" aria-hidden="true"><circle cx="32" cy="35" r="26" fill="#fff"/><ellipse cx="32" cy="25" rx="13" ry="10" fill="#bb0000"/></svg>
+        <span>Buckeye Tutor</span>
+      </a>
+      <a href="index.html">Back to the landing page <svg class="icon" aria-hidden="true"><use href="#i-arrow"/></svg></a>
+    </div>
+  </header>
+
+  <main id="main" class="wrap console">
+    <section aria-labelledby="t-h">
+      <p class="eyebrow">For our team and instructor</p>
+      <h1 id="t-h">Team test console</h1>
+      <p class="lede">Records anonymous outcomes from our blind test and applies the rule we committed to <em>before</em> testing. Everything is stored in this browser only. Nothing is transmitted anywhere.</p>
+    </section>
+
+    <div class="grid-2">
+      <section class="card" aria-labelledby="rule-h">
+        <h2 id="rule-h">Precommitted rule</h2>
+        <dl class="kv" id="rule-kv"></dl>
+        <p class="help">Numbers come from <code>config.js</code> and mirror <code>EXPERIMENT.md</code>. The git commit that first contains them is the timestamp that proves they came before the data.</p>
+      </section>
+      <section class="card" aria-labelledby="setup-h">
+        <h2 id="setup-h">Before you test</h2>
+        <ul class="checklist" id="setup-list"></ul>
+      </section>
+    </div>
+
+    <section aria-labelledby="log-h">
+      <h2 id="log-h">Log the test</h2>
+      <p class="lede">One row per tester who was <strong>exposed</strong> to the page, including people who bounced. That is your denominator. Never log someone&rsquo;s name.</p>
+      <div class="grid-2">
+        <form id="log-form" class="card form" novalidate>
+          <h3>Add a tester</h3>
+          <div class="field">
+            <label for="l-lane">What were they testing?</label>
+            <select id="l-lane"><option value="course">A class at Ohio State</option><option value="test">A test or specialty skill</option></select>
+          </div>
+          <div class="field">
+            <label for="l-outcome">What did they do?</label>
+            <select id="l-outcome"></select>
+          </div>
+          <div class="field" id="l-price-field">
+            <label for="l-price">Which option did they pick?</label>
+            <select id="l-price"></select>
+          </div>
+          <div class="field">
+            <label for="l-note">Friction or comment (optional)</label>
+            <input id="l-note" maxlength="120" autocomplete="off" aria-describedby="l-note-help">
+            <p id="l-note-help" class="help">Observed behavior only, for example &ldquo;hesitated at the confidence question&rdquo;. No names.</p>
+          </div>
+          <button class="btn btn-primary" type="submit">Add to ledger</button>
+          <p class="status" id="log-status" role="status"></p>
+        </form>
+
+        <div class="card form">
+          <h3>Pull in this device&rsquo;s runs</h3>
+          <p>If testers used <em>this</em> browser, import their plan runs so you don&rsquo;t retype them. Each run imports once.</p>
+          <button class="btn btn-ghost" type="button" id="import-btn">Import runs</button>
+          <p class="status" id="import-status" role="status"></p>
+          <div class="field">
+            <label for="emails">Emails actually received from testers</label>
+            <input id="emails" type="number" min="0" step="1" inputmode="numeric" aria-describedby="emails-help">
+            <p id="emails-help" class="help">Count them from the inbox. A sent email is stronger evidence than a click.</p>
+          </div>
+          <p class="help" id="tutor-count"></p>
+        </div>
+      </div>
+    </section>
+
+    <section aria-labelledby="res-h">
+      <h2 id="res-h">Result against the rule</h2>
+      <div class="card" id="result-card" aria-live="polite"></div>
+    </section>
+
+    <section aria-labelledby="ledger-h">
+      <h2 id="ledger-h">Ledger</h2>
+      <div class="table-wrap" id="ledger"></div>
+      <p><button class="btn btn-danger btn-sm" type="button" id="clear-btn">Clear ledger</button></p>
+    </section>
+
+    <section aria-labelledby="export-h">
+      <h2 id="export-h">Evidence export</h2>
+      <p class="lede">Paste this into <code>EVIDENCE.md</code>. Add the date and setting yourself, and edit only to correct mistakes, never to improve the result.</p>
+      <label for="export-text" class="help">Generated from the ledger above</label>
+      <textarea id="export-text" class="mono" readonly></textarea>
+      <p><button class="btn btn-ghost btn-sm" type="button" id="copy-btn"><svg class="icon" aria-hidden="true"><use href="#i-copy"/></svg> Copy evidence</button></p>
+      <p class="status" id="copy-status" role="status"></p>
+    </section>
+
+    <section aria-labelledby="econ-h" class="card">
+      <h2 id="econ-h">Unit economics</h2>
+      <p class="lede">Per student-hour. Every input is an assumption we have not yet validated; <code>ECONOMICS.md</code> says which are weakest.</p>
+      <div class="pill-row" id="presets" role="group" aria-label="Price presets"></div>
+      <div class="form-row" style="margin-top:1rem">
+        <div class="field"><label for="c-price">Price ($/hr)</label><input id="c-price" type="number" min="1" step="1" inputmode="decimal"></div>
+        <div class="field"><label for="c-take">Our take rate (%)</label><input id="c-take" type="number" min="0" max="100" step="1" inputmode="decimal"></div>
+        <div class="field"><label for="c-sess">Sessions per semester</label><input id="c-sess" type="number" min="0" step="0.5" inputmode="decimal"></div>
+        <div class="field"><label for="c-sem">Semesters retained</label><input id="c-sem" type="number" min="0" step="0.1" inputmode="decimal"></div>
+        <div class="field"><label for="c-cac">Acquisition cost ($/student)</label><input id="c-cac" type="number" min="0" step="1" inputmode="decimal"></div>
+        <div class="field"><label for="c-fixed">Fixed cost ($/month)</label><input id="c-fixed" type="number" min="0" step="5" inputmode="decimal"></div>
+      </div>
+      <div class="econ-grid" id="econ-out" aria-live="polite"></div>
+      <p class="help">Card processing assumed at 2.9% + $0.30 per payment. Group sessions are modeled per student, since each student pays separately.</p>
+    </section>
+  </main>
+
+  <script type="module" src="team.js"></script>
+</body>
+</html>

@@ -1,83 +1,270 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="BUSFIN 4215 venture MVP starter">
-    <title>ClearShift — Venture MVP Starter</title>
-    <link rel="icon" href="data:,">
-    <link rel="stylesheet" href="styles.css">
-  </head>
-  <body>
-    <header class="hero">
-      <nav aria-label="Primary navigation">
-        <a class="brand" href="#top">ClearShift <span>starter</span></a>
-        <a href="#test">See the test</a>
-      </nav>
-      <div class="hero-grid" id="top">
-        <div>
-          <p class="eyebrow">Replace this with one specific customer moment</p>
-          <h1>Know which shift needs attention before the schedule breaks.</h1>
-          <p class="lede">
-            A deliberately incomplete concierge MVP for managers coordinating hourly
-            teams. Your venture must replace the customer, mechanism, proof, and offer.
-          </p>
-          <button class="button" type="button" data-event="pilot_intent">Request a pilot</button>
-          <p class="microcopy">Demo only: this starter never transmits or stores personal information.</p>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Buckeye Tutor | Find a tutor before the exam finds you</title>
+  <meta name="description" content="Tell us your class or test and your exam date. Get a week-by-week tutor plan with real prices in 60 seconds, then we hand-match you with a tutor. Pilot for Ohio State students.">
+  <meta name="theme-color" content="#bb0000">
+  <meta property="og:title" content="Buckeye Tutor: find a tutor before the exam finds you">
+  <meta property="og:description" content="A week-by-week tutor plan with real prices in 60 seconds. Course tutors and independent LSAT/MCAT specialists. Pilot for Ohio State students.">
+  <meta property="og:type" content="website">
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700;800&family=Barlow:wght@400;500;600;700&display=swap">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+    <defs>
+      <symbol id="i-arrow" viewBox="0 0 24 24"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></symbol>
+      <symbol id="i-check" viewBox="0 0 24 24"><path d="M20 6 9 17l-5-5"/></symbol>
+      <symbol id="i-mail" viewBox="0 0 24 24"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-10 6L2 7"/></symbol>
+      <symbol id="i-copy" viewBox="0 0 24 24"><rect width="14" height="14" x="8" y="8" rx="2"/><path d="M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2"/></symbol>
+      <symbol id="i-target" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="6"/><circle cx="12" cy="12" r="2"/></symbol>
+      <symbol id="i-cap" viewBox="0 0 24 24"><path d="M21.42 10.92a1 1 0 0 0-.02-1.84L12.83 5.18a2 2 0 0 0-1.66 0L2.6 9.08a1 1 0 0 0 0 1.83l8.58 3.91a2 2 0 0 0 1.66 0z"/><path d="M22 10v6"/><path d="M6 12.5V16a6 3 0 0 0 12 0v-3.5"/></symbol>
+      <symbol id="i-users" viewBox="0 0 24 24"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></symbol>
+      <symbol id="i-lock" viewBox="0 0 24 24"><rect width="18" height="11" x="3" y="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></symbol>
+      <symbol id="i-book" viewBox="0 0 24 24"><path d="M4 19.5v-15A2.5 2.5 0 0 1 6.5 2H20v20H6.5a2.5 2.5 0 0 1 0-5H20"/></symbol>
+    </defs>
+  </svg>
+
+  <a class="skip" href="#main">Skip to main content</a>
+
+  <header class="hero" id="top">
+    <nav class="nav wrap" aria-label="Primary">
+      <a class="brand" href="#top" aria-label="Buckeye Tutor home">
+        <svg class="brand-mark" viewBox="0 0 64 64" aria-hidden="true"><circle cx="32" cy="35" r="26" fill="#fff"/><ellipse cx="32" cy="25" rx="13" ry="10" fill="#bb0000"/></svg>
+        <span>Buckeye Tutor</span>
+      </a>
+      <div class="nav-links">
+        <a href="#how">How it works</a>
+        <a href="#lanes">Who tutors</a>
+        <a href="#tutors">For tutors</a>
+        <a href="#test">What we're testing</a>
+      </div>
+      <a class="btn btn-light btn-sm" href="#planner">Get my plan</a>
+    </nav>
+
+    <div class="wrap hero-grid">
+      <div class="hero-copy">
+        <p class="eyebrow eyebrow-light">Tutoring for Ohio State students &middot; Pilot in Columbus</p>
+        <h1>Find a tutor before the exam finds you.</h1>
+        <p class="lede">Tell us your class or test and your exam date. In 60 seconds you get a week-by-week tutor plan with real prices. Then we hand-match you with someone who has done what you&rsquo;re facing.</p>
+        <div class="hero-actions">
+          <a class="btn btn-light" href="#planner">Build my tutor plan <svg class="icon" aria-hidden="true"><use href="#i-arrow"/></svg></a>
+          <a class="link-light" href="#how">How it works</a>
         </div>
-        <div class="product-card" aria-label="Example product preview">
-          <p class="eyebrow">Today</p>
-          <h2>Coverage risk</h2>
-          <div class="risk-row"><span>Opening shift</span><strong>Ready</strong></div>
-          <div class="risk-row warning"><span>Lunch shift</span><strong>1 gap</strong></div>
-          <div class="risk-row"><span>Closing shift</span><strong>Ready</strong></div>
-          <button class="button button-secondary" type="button" data-event="demo_intent">Try the workflow</button>
+        <ul class="facts">
+          <li><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg> No account and no payment on this page</li>
+          <li><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg> Nothing leaves your device until you choose to email us</li>
+        </ul>
+      </div>
+
+      <aside class="peek" aria-label="Example tutor plan">
+        <p class="peek-tag">Example plan</p>
+        <p class="peek-title">MATH 1152 Calculus II</p>
+        <p class="peek-sub">Exam in 12 days &middot; confidence 2 of 5</p>
+        <p class="peek-big"><strong>3</strong> sessions over <strong>2</strong> weeks</p>
+        <ol class="peek-phases">
+          <li><span>Week 1 &middot; Find the gaps</span><b>2 sessions</b></li>
+          <li><span>Week 2 &middot; Timed practice</span><b>1 session</b></li>
+        </ol>
+        <p class="peek-foot">About <strong>$60</strong> with a peer tutor at $20/hr</p>
+      </aside>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="section" id="how" aria-labelledby="how-h">
+      <div class="wrap">
+        <p class="eyebrow">How it works</p>
+        <h2 id="how-h">Three steps. No account.</h2>
+        <ol class="steps">
+          <li>
+            <span class="step-icon"><svg class="icon" aria-hidden="true"><use href="#i-target"/></svg></span>
+            <h3>Tell us what you&rsquo;re facing</h3>
+            <p>Your class or test, how long you have, and how solid you feel. That&rsquo;s it. No name or email needed to see your plan.</p>
+          </li>
+          <li>
+            <span class="step-icon"><svg class="icon" aria-hidden="true"><use href="#i-book"/></svg></span>
+            <h3>Get a plan with real prices</h3>
+            <p>A phase-by-phase schedule, what it would cost at each tutor level, and the free campus options to try first.</p>
+          </li>
+          <li>
+            <span class="step-icon"><svg class="icon" aria-hidden="true"><use href="#i-users"/></svg></span>
+            <h3>We hand-match you</h3>
+            <p>Pick an option and request a match. During the pilot a person on our team finds you a tutor and replies within 48 hours. If we can&rsquo;t find a good fit, we&rsquo;ll say so.</p>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <section class="section section-tint" id="planner" aria-labelledby="planner-h">
+      <div class="wrap">
+        <p class="eyebrow">Try it now</p>
+        <h2 id="planner-h">Your tutor plan in 60 seconds.</h2>
+        <p class="section-lede">It&rsquo;s a planning rule of thumb, not a grade guarantee. We show you the cost of each option so you can decide with real numbers.</p>
+        <noscript><p class="notice">The planner needs JavaScript. Please enable it or try another browser.</p></noscript>
+
+        <div class="tool">
+          <form id="planner-form" class="card form" novalidate>
+            <fieldset class="field">
+              <legend>What do you need help with?</legend>
+              <div class="choices">
+                <label class="choice">
+                  <input type="radio" name="lane" value="course" checked>
+                  <span class="choice-body"><strong>A class at Ohio State</strong><small>Intro STEM, business, econ and more</small></span>
+                </label>
+                <label class="choice">
+                  <input type="radio" name="lane" value="test">
+                  <span class="choice-body"><strong>A test or specialty skill</strong><small>LSAT, MCAT, GRE, GMAT, DAT, Excel&hellip;</small></span>
+                </label>
+              </div>
+            </fieldset>
+
+            <div class="field">
+              <label for="subject" id="subject-label">Which course or test?</label>
+              <input id="subject" name="subject" list="subject-options" autocomplete="off" maxlength="40" aria-describedby="subject-help subject-error" required>
+              <datalist id="subject-options"></datalist>
+              <p id="subject-help" class="help">Pick a suggestion or type your own. Please don&rsquo;t enter personal information.</p>
+              <p id="subject-error" class="error" role="alert" hidden></p>
+            </div>
+
+            <div class="field">
+              <label for="when">When is the exam or deadline?</label>
+              <select id="when" name="when"></select>
+            </div>
+
+            <fieldset class="field" aria-describedby="conf-error">
+              <legend>How confident do you feel about the material right now?</legend>
+              <div class="scale" role="presentation">
+                <label><input type="radio" name="confidence" value="1"><span>1</span></label>
+                <label><input type="radio" name="confidence" value="2"><span>2</span></label>
+                <label><input type="radio" name="confidence" value="3"><span>3</span></label>
+                <label><input type="radio" name="confidence" value="4"><span>4</span></label>
+                <label><input type="radio" name="confidence" value="5"><span>5</span></label>
+              </div>
+              <div class="scale-ends" aria-hidden="true"><span>Lost</span><span>Solid</span></div>
+              <p id="conf-error" class="error" role="alert" hidden></p>
+            </fieldset>
+
+            <button class="btn btn-primary btn-block" type="submit">Build my tutor plan <svg class="icon" aria-hidden="true"><use href="#i-arrow"/></svg></button>
+          </form>
+
+          <div id="result" class="result" tabindex="-1" aria-label="Your tutor plan">
+            <div class="empty card">
+              <svg class="icon icon-lg" aria-hidden="true"><use href="#i-target"/></svg>
+              <p><strong>Your plan appears here.</strong></p>
+              <p>You&rsquo;ll see a phase-by-phase schedule, what each tutor level would cost, and free options to try first.</p>
+            </div>
+          </div>
         </div>
       </div>
-    </header>
+    </section>
 
-    <main>
-      <section aria-labelledby="mechanism-heading">
-        <p class="eyebrow">Mechanism, not adjectives</p>
-        <h2 id="mechanism-heading">A first-time visitor should reconstruct the causal claim.</h2>
-        <div class="steps">
-          <article><span>1</span><h3>Observe</h3><p>Name the current workaround and the behavior that reveals pain.</p></article>
-          <article><span>2</span><h3>Act</h3><p>Offer one meaningful action that tests value, not a decorative button.</p></article>
-          <article><span>3</span><h3>Decide</h3><p>Compare the observed rate with a threshold written before the test.</p></article>
+    <section class="section" id="lanes" aria-labelledby="lanes-h">
+      <div class="wrap">
+        <p class="eyebrow">Who tutors</p>
+        <h2 id="lanes-h">Two kinds of help, one place to ask.</h2>
+        <div class="two">
+          <article class="card lane-card">
+            <span class="step-icon"><svg class="icon" aria-hidden="true"><use href="#i-cap"/></svg></span>
+            <h3>Course tutors</h3>
+            <p>Matched to your Ohio State class, taught by people who took it here: students who earned an A or A-, former TAs, and grad students.</p>
+            <p class="standard"><strong>Our pilot standard:</strong> we ask for proof of the course grade or TA role before the first match.</p>
+          </article>
+          <article class="card lane-card">
+            <span class="step-icon"><svg class="icon" aria-hidden="true"><use href="#i-target"/></svg></span>
+            <h3>Independent specialists</h3>
+            <p>For LSAT, MCAT, GRE, GMAT and other high-stakes exams, where the right coach matters more than the right campus.</p>
+            <p class="standard"><strong>Our pilot standard:</strong> a recent qualifying score or a documented coaching track record, checked before we match.</p>
+          </article>
         </div>
-      </section>
+        <p class="honest"><svg class="icon" aria-hidden="true"><use href="#i-lock"/></svg> We are recruiting tutors now. We will never show invented reviews or tutor counts: what you see here is what exists.</p>
+      </div>
+    </section>
 
-      <section id="test" class="experiment" aria-labelledby="test-heading">
+    <section class="section section-tint" id="tutors" aria-labelledby="tutors-h">
+      <div class="wrap tutors">
         <div>
-          <p class="eyebrow">Starter hypothesis</p>
-          <h2 id="test-heading">Will 5 of 10 target managers request a pilot?</h2>
-          <p>
-            Replace this claim in <code>EXPERIMENT.md</code>. During the classroom blind
-            test, record denominators and behavior manually. This page stores only a local,
-            same-device demonstration count and sends nothing to a server.
-          </p>
+          <p class="eyebrow">For tutors</p>
+          <h2 id="tutors-h">Good at a class? Get paid to teach it.</h2>
+          <p class="section-lede">Pick your lane and your hours to see what you&rsquo;d keep. Tutors keep <strong data-take-keep></strong> of every session; Buckeye Tutor keeps <strong data-take-rate></strong> for matching, scheduling and payments.</p>
         </div>
-        <div class="counter" aria-live="polite">
-          <strong id="intent-count">0</strong>
-          <span>local test actions</span>
-          <button id="reset" class="text-button" type="button">Reset local demo count</button>
+        <form id="tutor-form" class="card form" novalidate>
+          <fieldset class="field">
+            <legend>What would you tutor?</legend>
+            <div class="choices">
+              <label class="choice"><input type="radio" name="tlane" value="course" checked><span class="choice-body"><strong>A class</strong><small>Ohio State course</small></span></label>
+              <label class="choice"><input type="radio" name="tlane" value="test"><span class="choice-body"><strong>A test</strong><small>LSAT, MCAT, GRE&hellip;</small></span></label>
+            </div>
+          </fieldset>
+          <div class="field">
+            <label for="ttier">Listing level</label>
+            <select id="ttier"></select>
+          </div>
+          <div class="field">
+            <label for="thours">Hours per week you could tutor: <output id="thours-out">5</output></label>
+            <input id="thours" type="range" min="1" max="15" value="5">
+          </div>
+          <div class="earn" aria-live="polite">
+            <div><span>Per hour</span><strong id="e-hour">$0</strong></div>
+            <div><span>Per week</span><strong id="e-week">$0</strong></div>
+            <div><span>Per term</span><strong id="e-term">$0</strong></div>
+          </div>
+          <p class="help">Estimates before taxes, assuming every hour is booked. Real bookings will vary.</p>
+          <div class="field">
+            <label for="tsubjects">Which class or test?</label>
+            <input id="tsubjects" maxlength="60" autocomplete="off" aria-describedby="tsub-error">
+            <p id="tsub-error" class="error" role="alert" hidden></p>
+          </div>
+          <button class="btn btn-primary btn-block" type="submit">Draft my email to the team <svg class="icon" aria-hidden="true"><use href="#i-mail"/></svg></button>
+          <div id="tutor-out" class="confirm" tabindex="-1" hidden></div>
+        </form>
+      </div>
+    </section>
+
+    <section class="section" id="test" aria-labelledby="test-h">
+      <div class="wrap two">
+        <div>
+          <p class="eyebrow">Full transparency</p>
+          <h2 id="test-h">This page is an experiment. Here&rsquo;s the bet.</h2>
+          <p class="section-lede">Buckeye Tutor is a student venture built for an entrepreneurial finance class. We&rsquo;d rather learn that no one wants this now than after building it.</p>
+          <blockquote class="bet">
+            <p>We believe Ohio State students facing an exam scramble to find a tutor through word of mouth, with no price or quality information. If shown a concrete, priced plan and offered a hand-matched tutor, at least <strong data-rule-min></strong> of our first <strong data-rule-n></strong> testers will ask for a match, and the ones who do will choose options averaging <strong data-rule-price></strong> an hour or more.</p>
+            <p><strong>If not, we stop building and change the idea.</strong></p>
+          </blockquote>
+          <p><a class="link" href="team.html">Open the team&rsquo;s test console <svg class="icon" aria-hidden="true"><use href="#i-arrow"/></svg></a></p>
         </div>
-      </section>
+        <div class="card privacy">
+          <h3>What happens to your answers</h3>
+          <ul class="ticks">
+            <li><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg> Your answers stay in this browser on this device. This site has no server or database.</li>
+            <li><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg> We collect no name, email or student ID. The plan works without them.</li>
+            <li><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg> &ldquo;Request a match&rdquo; opens your own email app with a draft. Nothing is sent unless you press send.</li>
+            <li><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg> Our test team tallies anonymous outcomes by hand, such as &ldquo;asked for a match&rdquo; or &ldquo;said it was too expensive&rdquo;.</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+  </main>
 
-      <dialog id="response-dialog">
-        <h2>Intent recorded on this device</h2>
-        <p>
-          This is a safe placeholder, not customer evidence. Replace it with an ethical
-          test appropriate to your hypothesis, and disclose what will happen before a user acts.
-        </p>
-        <button class="button" type="button" data-close>Close</button>
-      </dialog>
-    </main>
+  <footer class="footer">
+    <div class="wrap footer-grid">
+      <div>
+        <p class="footer-brand">Buckeye Tutor</p>
+        <p>An independent student venture and class project. Not affiliated with, endorsed by, or sponsored by The Ohio State University. Course names are used only to describe which classes tutoring is for.</p>
+      </div>
+      <div class="footer-links">
+        <a href="#planner">Get my plan</a>
+        <a href="#tutors">For tutors</a>
+        <a href="team.html">Team test console</a>
+      </div>
+    </div>
+  </footer>
 
-    <footer>
-      <p><strong>BUSFIN 4215 starter.</strong> Do not submit unchanged. Do not collect sensitive data.</p>
-    </footer>
-
-    <script type="module" src="app.js"></script>
-  </body>
+  <script type="module" src="app.js"></script>
+</body>
 </html>

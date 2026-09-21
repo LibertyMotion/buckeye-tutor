@@ -1,37 +1,55 @@
-# BUSFIN 4215 Venture MVP Starter
+# Buckeye Tutor
 
-This is a deployable starting point for the team **Venture MVP / Landing Page** project. It
-shows the structure of a causal claim, a meaningful call to action, a precommitted decision
-rule, explicit denominators, and transparent evidence. It deliberately transmits no data.
+A concierge MVP for the BUSFIN 4215 venture project. Ohio State students enter a class or a test (LSAT, MCAT,
+GRE...) and an exam date, get a phased tutor plan with real prices and free campus options, then either
+**request a hand-matched tutor** or tell us why not. Built to test one consequential hypothesis, not to look finished.
 
-Submitting the unchanged starter is not acceptable. Replace its customer, problem, value
-mechanism, interaction, hypothesis, evidence, economics, writing, and visual identity.
+- Landing page and planner: `index.html`
+- Team test console (rule, ledger, evidence export, unit economics): `team.html`
+- **No backend, no accounts, no personal data.** Everything a tester enters stays in their browser.
 
-## Start and test
+## Run and test
 
 ```bash
-npm run serve
-npm test
+npm test          # 27 unit tests: planner, economics, decision rule
+npm run serve     # http://localhost:8000
 ```
 
-Open <http://localhost:8000>. Complete `EXPERIMENT.md` before changing the interface.
+## Before you share the link
 
-## Deploy
+1. **Set `CONTACT_EMAIL` in `config.js`** to a real inbox the team checks. Until then, "Request this match" only
+   offers *Copy request*, and the team console shows a red flag.
+2. **Confirm the rule in `config.js` and `EXPERIMENT.md`, then commit both before the first tester.**
+   The commit timestamp is your precommitment receipt.
+3. Deploy (below), open the live URL in a private window and on a second device.
+4. Only ship the "we reply within 48 hours" promise if you will keep it.
 
-Push to `main`. In **Settings → Pages**, select **GitHub Actions** if needed. The included
-workflow tests the experiment logic and deploys the static site. Verify the public URL in a
-private browser window and on a second device.
+## Deploy (GitHub Pages)
 
-## Evidence package
+Create your repo from the course template, copy these files over it, then push to `main`. In **Settings -> Pages**
+choose **GitHub Actions** if needed. The included workflow runs `npm test` and deploys. If tests fail, nothing deploys.
 
-- public URL and repository/source;
-- `EXPERIMENT.md` with a named hypothesis and precommitted rule;
-- `EVIDENCE.md` with ethical behavioral evidence and denominators;
-- `ECONOMICS.md`;
-- `BUILD_LOG.md`; and
-- `REVISION_RECEIPT.md`.
+## Run the test and collect evidence
 
-The starter's local click count is only a transparent demonstration. It is not credible
-customer evidence. If the venture truly needs persistent data, consult the instructor
-before adding a backend, collect the minimum data possible, and explain retention and
-consent.
+1. Read testers the disclosure and follow the observer script in `EXPERIMENT.md`.
+2. Log **every exposed tester, including bounces**, in `team.html`. If testers used your device, click *Import runs*.
+3. Count real emails in the inbox and enter that number in the console.
+4. Copy **Evidence export** into `EVIDENCE.md`. Write the "what this does and does not support" line yourselves.
+5. Fill `REVISION_RECEIPT.md` from what actually happened, and finish the **[TEAM]** cells in `BUILD_LOG.md`.
+
+## Files
+
+| File | Role |
+|---|---|
+| `planner.js` | Plan rule of thumb, price tiers, request/tutor email drafts (pure, tested) |
+| `experiment.js` | Starter's threshold logic + ledger summary and `evaluateRule` |
+| `economics.js` | Unit economics (pure, tested) |
+| `config.js` | Contact email, take rate, **the precommitted rule** |
+| `app.js` / `team.js` | Landing-page and console behavior |
+| `EXPERIMENT.md` `EVIDENCE.md` `ECONOMICS.md` `BUILD_LOG.md` `REVISION_RECEIPT.md` | The submission package |
+
+## Honest limits
+
+No tutors are recruited, no payment exists, and matching is a person reading an email. The MVP measures whether
+students *ask* for a priced match. It does not show that they will pay, rebook, or improve their grades.
+Buckeye Tutor is an independent student project, not affiliated with The Ohio State University.
